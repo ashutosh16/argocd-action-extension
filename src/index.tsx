@@ -20,7 +20,7 @@ export const ActionExtension: React.FC<ExtensionProps> = ({ application, openFly
         application.metadata?.labels && application.metadata.labels['application.environmentLabelKey'] === "prd" ? (
             <>
                 <button onClick={openFlyout} style={{ marginRight: '2px' }} className="argo-button argo-button--base">
-                    <span style={{ marginLeft: '-5px', marginRight: '5px' }} className="show-for-large"> Request Elevation</span>
+                    <span style={{ marginLeft: '-5px', marginRight: '5px' }} className="show-for-large"> Permissions</span>
                 </button>
             </>
         ):<></>
@@ -59,7 +59,7 @@ export const StatusExtension: React.FC<ExtensionProps> = ({ application, openFly
             Devops user can perform the prod changes until {data.currentTime}
         </div>
     ) : (
-        <></>
+        <div style={{ fontWeight: 500, color: 'green', textAlign: 'center' }}>READ ONLY</div>
     );
 };
 
