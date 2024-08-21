@@ -118,5 +118,5 @@ export const statusComponent = StatusExtension;
 export const flyout = ActionFlyout;
 
 // Register the component extension in ArgoCD
-(window as any)?.extensionsAPI?.registerToolBarExtension(toolbarComponent, TITLE, ID, flyout);
+(window as any)?.extensionsAPI?.registerTopBarExtension(toolbarComponent, TITLE, ID, flyout, true, false);
 (window as any)?.extensionsAPI?.registerStatusPanelExtension(statusComponent, TITLE, ID);
